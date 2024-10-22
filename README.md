@@ -42,17 +42,25 @@ Pour l'instant pas développé.
 
 `pip install -r requirements.txt` 
 
+Les tests :
+
+`python3 -m unittest discover -s Tests`
+
+Lecture de la video sans les détections :  
+
 `python3 -m Faces.extractFrames ./Videos/kingCharles.mp4` 
 
-Pour l'instant le module n'a fait que lire la vidéo. 
+Création du modèle (le SVC) :  
 
 `python3 -m Faces.createModel new_model.pt` 
 
 on peut remplacer `new_model.pt` par un autre nom de modèle tant que l'on garde l'extension `.pt`. 
 
-Pour créer le film avec la détection. 
+Pour lire le film en affichant les détections : 
 
 `python3 -m Faces.extractFrames ./Videos/kingCharles.mp4 ./Videos/selectedDetection.mp4 new_model.pt` 
+
+on peut changer le titre du film (`./Videos/selectedDetection.mp4`) que le programme va produire. 
 
 
 

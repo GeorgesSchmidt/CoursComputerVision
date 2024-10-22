@@ -1,7 +1,10 @@
+import logging
 import cv2
 import numpy as np
 import os
+
 from insightface.app import FaceAnalysis
+
 
 
 class DetectFaces:
@@ -107,3 +110,4 @@ if __name__ == '__main__':
     for path in paths:
         p = os.path.join(image_directory, path)
         main(p)  # Call main function for each image
+        

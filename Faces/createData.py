@@ -26,7 +26,7 @@ class CreateDatas(DetectFaces):
             self.X.append(emb)
             self.y.append(1)
             
-        print('people embeddings =', len(no_king_emb), 'king embeddings', len(king_emb))
+        print('people embeddings =', len(self.X), 'king embeddings', len(self.y))
         
         
     def get_datas(self, path):

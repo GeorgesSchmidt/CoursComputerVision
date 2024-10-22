@@ -4,7 +4,7 @@ import os
 import joblib
 import argparse  # Importing argparse to handle command-line arguments
 
-from Modules.detectFaces import DetectFaces
+from Faces.detectFaces import DetectFaces
 
 class GetFrames(DetectFaces):
     """
@@ -22,13 +22,15 @@ class GetFrames(DetectFaces):
             model (str): Path to the pre-trained machine learning model used for face prediction.
         """
         super().__init__()
+        
+        self.cap = cv2.VideoCapture(input_path)
+        
         self.pred = False
         if model is not None and input_path is not None:
             self.pred = True
             self.model = joblib.load(model)
             self.create_recorder(output_path)
             
-        self.cap = cv2.VideoCapture(input_path)
         
     def create_recorder(self, title):
         """
