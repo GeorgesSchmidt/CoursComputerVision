@@ -1,6 +1,8 @@
 # CoursComputerVision
 Cours Artefact de vision par ordinateur
 
+![king detected](RepoPic/picKing.png)
+
 # 1 Le repo Git. 
 
 Un repo Git propre doit comporter :
@@ -42,7 +44,7 @@ Pour l'instant pas développé.
 
 `pip install -r requirements.txt` 
 
-Les tests :
+Les tests (attention les tests peuvent paraitrent un peu longs). Possibilité d'appuyer sur `esc` pendant le déroulé du film. 
 
 `python3 -m unittest discover -s Tests`
 
@@ -62,8 +64,9 @@ Pour lire le film en affichant les détections :
 
 on peut changer le titre du film (`./Videos/selectedDetection.mp4`) que le programme va produire. 
 
+# 4 La pratique. 
 
-
+Avec les modules présents dans ce repo, les élèves doivent essayer de détecter les professeurs dans la salle et de masquer tous les autres élèves. 
 
 
 
